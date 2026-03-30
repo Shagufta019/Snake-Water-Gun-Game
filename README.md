@@ -4,12 +4,14 @@ This is a simple command-line game built with Python.
 ## How to Play
 1. Run the `main.py` file.
 2. Choose **s** for Snake, **w** for Water, or **g** for Gun.
-3. The computer will make its choice, and the winner will be declared!
+3. The game tracks scores for 5 rounds and declares a final winner.
 
 ## 🛠️ Logic
 - **Snake** drinks **Water** (Snake wins)
 - **Water** douses **Gun** (Water wins)
 - **Gun** kills **Snake** (Gun wins)
 
-## Requirements
-* Python 3.x
+## Features
+- 5-round game loop.
+- Score tracking for Player and Computer.
+- Handles invalid inputs.
