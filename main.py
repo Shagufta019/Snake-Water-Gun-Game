@@ -14,15 +14,17 @@ reverseDict = {1: "Snake", -1: "Water", 0: "Gun"}
 
 print("--- Welcome to Snake, Water, Gun: 5 Round Match! ---")
 
-for i in range(1, 6):
-    print(f"\nRound {i}/5:")
-    computer = random.choice([-1, 0, 1])
+round_num = 1
+
+while round_num <= 5:
+    print(f"\nRound {round_num}/5:")
     youstr = input("Enter your choice (s,w,g): ")
 
     if youstr not in youDict:
         print("Invalid input! Please choose s, w, or g.")
         continue
-
+    
+    computer = random.choice([-1, 0, 1])
     you = youDict[youstr]
     print("You chose:", reverseDict[you])
     print("Computer chose:", reverseDict[computer])
@@ -38,6 +40,8 @@ for i in range(1, 6):
             print("You lose this round!")
             comp_score += 1
        
+    round_num += 1  # only increase after valid input
+    
 # Final Result
 print("\n" + "-"*40)
 print(f"FINAL SCORE - You: {user_score} | Computer: {comp_score}")
